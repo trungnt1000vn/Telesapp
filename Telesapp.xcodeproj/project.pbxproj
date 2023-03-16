@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74E1EFB90F56C83B64F7547F /* Pods_Telesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D686B482DB302509109307 /* Pods_Telesapp.framework */; };
+		87138FE229C1AA7100A5F49C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87138FE129C1AA7100A5F49C /* GoogleService-Info.plist */; };
+		87138FE429C1C39300A5F49C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87138FE329C1C39300A5F49C /* DatabaseManager.swift */; };
 		87502A6329C170F3003BB59B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A6229C170F3003BB59B /* AppDelegate.swift */; };
 		87502A6529C170F3003BB59B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A6429C170F3003BB59B /* SceneDelegate.swift */; };
-		87502A6729C170F3003BB59B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A6629C170F3003BB59B /* ViewController.swift */; };
+		87502A6729C170F3003BB59B /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A6629C170F3003BB59B /* ConversationsViewController.swift */; };
 		87502A6A29C170F3003BB59B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87502A6829C170F3003BB59B /* Main.storyboard */; };
 		87502A6C29C170F4003BB59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87502A6B29C170F4003BB59B /* Assets.xcassets */; };
 		87502A6F29C170F4003BB59B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87502A6D29C170F4003BB59B /* LaunchScreen.storyboard */; };
+		87502A7729C1784C003BB59B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A7629C1784C003BB59B /* LoginViewController.swift */; };
+		87502A7929C17867003BB59B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A7829C17867003BB59B /* RegisterViewController.swift */; };
+		87502A7B29C17891003BB59B /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A7A29C17891003BB59B /* VideoPlayerViewController.swift */; };
+		87502A7D29C1789F003BB59B /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A7C29C1789F003BB59B /* NewConversationViewController.swift */; };
+		87502A7F29C178B4003BB59B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A7E29C178B4003BB59B /* ProfileViewController.swift */; };
+		87502A8129C178C2003BB59B /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A8029C178C2003BB59B /* PhotoViewerViewController.swift */; };
+		87502A8929C1795F003BB59B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A8829C1795F003BB59B /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		227D033474D1BF76293F24B5 /* Pods-Telesapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telesapp.release.xcconfig"; path = "Target Support Files/Pods-Telesapp/Pods-Telesapp.release.xcconfig"; sourceTree = "<group>"; };
+		652C3B042147A24C761976E7 /* Pods-Telesapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telesapp.debug.xcconfig"; path = "Target Support Files/Pods-Telesapp/Pods-Telesapp.debug.xcconfig"; sourceTree = "<group>"; };
+		87138FE129C1AA7100A5F49C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87138FE329C1C39300A5F49C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		87502A5F29C170F3003BB59B /* Telesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87502A6229C170F3003BB59B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87502A6429C170F3003BB59B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		87502A6629C170F3003BB59B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87502A6629C170F3003BB59B /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		87502A6929C170F3003BB59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87502A6B29C170F4003BB59B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87502A6E29C170F4003BB59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87502A7029C170F4003BB59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87502A7629C1784C003BB59B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		87502A7829C17867003BB59B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		87502A7A29C17891003BB59B /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		87502A7C29C1789F003BB59B /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		87502A7E29C178B4003BB59B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		87502A8029C178C2003BB59B /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		87502A8829C1795F003BB59B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C4D686B482DB302509109307 /* Pods_Telesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E1EFB90F56C83B64F7547F /* Pods_Telesapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,8 @@
 			children = (
 				87502A6129C170F3003BB59B /* Telesapp */,
 				87502A6029C170F3003BB59B /* Products */,
+				D20B978E97190F9DCA9273D4 /* Pods */,
+				C8E9E14AF62C2607D9F6F6D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,97 @@
 		87502A6129C170F3003BB59B /* Telesapp */ = {
 			isa = PBXGroup;
 			children = (
-				87502A6229C170F3003BB59B /* AppDelegate.swift */,
-				87502A6429C170F3003BB59B /* SceneDelegate.swift */,
-				87502A6629C170F3003BB59B /* ViewController.swift */,
-				87502A6829C170F3003BB59B /* Main.storyboard */,
-				87502A6B29C170F4003BB59B /* Assets.xcassets */,
-				87502A6D29C170F4003BB59B /* LaunchScreen.storyboard */,
+				87138FE129C1AA7100A5F49C /* GoogleService-Info.plist */,
+				87502A8729C1793D003BB59B /* ViewModels */,
+				87502A8629C1792D003BB59B /* Controllers */,
+				87502A8529C17924003BB59B /* Views */,
+				87502A8429C1791C003BB59B /* Models */,
+				87502A8329C17911003BB59B /* Resources */,
 				87502A7029C170F4003BB59B /* Info.plist */,
 			);
 			path = Telesapp;
+			sourceTree = "<group>";
+		};
+		87502A8229C178F3003BB59B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				87502A7629C1784C003BB59B /* LoginViewController.swift */,
+				87502A7829C17867003BB59B /* RegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		87502A8329C17911003BB59B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87502A6229C170F3003BB59B /* AppDelegate.swift */,
+				87502A6429C170F3003BB59B /* SceneDelegate.swift */,
+				87502A8829C1795F003BB59B /* Extension.swift */,
+				87138FE329C1C39300A5F49C /* DatabaseManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		87502A8429C1791C003BB59B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		87502A8529C17924003BB59B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87502A6B29C170F4003BB59B /* Assets.xcassets */,
+				87502A8A29C1796E003BB59B /* Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		87502A8629C1792D003BB59B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87502A6629C170F3003BB59B /* ConversationsViewController.swift */,
+				87502A8229C178F3003BB59B /* Login */,
+				87502A7A29C17891003BB59B /* VideoPlayerViewController.swift */,
+				87502A7C29C1789F003BB59B /* NewConversationViewController.swift */,
+				87502A7E29C178B4003BB59B /* ProfileViewController.swift */,
+				87502A8029C178C2003BB59B /* PhotoViewerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		87502A8729C1793D003BB59B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		87502A8A29C1796E003BB59B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				87502A6829C170F3003BB59B /* Main.storyboard */,
+				87502A6D29C170F4003BB59B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C8E9E14AF62C2607D9F6F6D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4D686B482DB302509109307 /* Pods_Telesapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D20B978E97190F9DCA9273D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				652C3B042147A24C761976E7 /* Pods-Telesapp.debug.xcconfig */,
+				227D033474D1BF76293F24B5 /* Pods-Telesapp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87502A7329C170F4003BB59B /* Build configuration list for PBXNativeTarget "Telesapp" */;
 			buildPhases = (
+				387F46ED16163F5827603EDE /* [CP] Check Pods Manifest.lock */,
 				87502A5B29C170F3003BB59B /* Sources */,
 				87502A5C29C170F3003BB59B /* Frameworks */,
 				87502A5D29C170F3003BB59B /* Resources */,
+				552CDEB3E3AB091050FBE7D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87502A6F29C170F4003BB59B /* LaunchScreen.storyboard in Resources */,
+				87138FE229C1AA7100A5F49C /* GoogleService-Info.plist in Resources */,
 				87502A6C29C170F4003BB59B /* Assets.xcassets in Resources */,
 				87502A6A29C170F3003BB59B /* Main.storyboard in Resources */,
 			);
@@ -133,14 +243,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		387F46ED16163F5827603EDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Telesapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		552CDEB3E3AB091050FBE7D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Telesapp/Pods-Telesapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Telesapp/Pods-Telesapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Telesapp/Pods-Telesapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		87502A5B29C170F3003BB59B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87502A6729C170F3003BB59B /* ViewController.swift in Sources */,
+				87502A7929C17867003BB59B /* RegisterViewController.swift in Sources */,
+				87138FE429C1C39300A5F49C /* DatabaseManager.swift in Sources */,
+				87502A7D29C1789F003BB59B /* NewConversationViewController.swift in Sources */,
+				87502A6729C170F3003BB59B /* ConversationsViewController.swift in Sources */,
+				87502A7729C1784C003BB59B /* LoginViewController.swift in Sources */,
+				87502A7B29C17891003BB59B /* VideoPlayerViewController.swift in Sources */,
+				87502A8929C1795F003BB59B /* Extension.swift in Sources */,
 				87502A6329C170F3003BB59B /* AppDelegate.swift in Sources */,
+				87502A7F29C178B4003BB59B /* ProfileViewController.swift in Sources */,
 				87502A6529C170F3003BB59B /* SceneDelegate.swift in Sources */,
+				87502A8129C178C2003BB59B /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +442,7 @@
 		};
 		87502A7429C170F4003BB59B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 652C3B042147A24C761976E7 /* Pods-Telesapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +470,7 @@
 		};
 		87502A7529C170F4003BB59B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 227D033474D1BF76293F24B5 /* Pods-Telesapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
