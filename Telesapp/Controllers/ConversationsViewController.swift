@@ -14,6 +14,7 @@ class ConversationsViewController: UIViewController {
     
     private let spinner = JGProgressHUD(style: .dark)
     
+    
     private let tableView: UITableView = {
        let table = UITableView()
         table.isHidden = true
@@ -33,9 +34,20 @@ class ConversationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(didTapComposeButton))
         view.addSubview(tableView)
         setupTableView()
         fetchConversations()
+    }
+    @objc private func didTapComposeButton(){
+        let vc = NewConversationViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true)
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
     }
     override func viewDidAppear(_ animated: Bool) {
         
@@ -55,7 +67,7 @@ class ConversationsViewController: UIViewController {
         tableView.dataSource = self
     }
     private func fetchConversations(){
-        
+        tableView.isHidden = false
     }
 }
 extension ConversationsViewController:UITableViewDelegate,UITableViewDataSource{
@@ -65,9 +77,17 @@ extension ConversationsViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello World"
+        cell.textLabel?.text = "Na Hee"
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = ChatViewController()
+        vc.title = "Na-hee Kim"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
