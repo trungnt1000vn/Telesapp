@@ -10,6 +10,8 @@ import JGProgressHUD
 
 class NewConversationViewController: UIViewController{
     
+    
+    
     private let spinner = JGProgressHUD()
     
     

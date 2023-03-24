@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		74E1EFB90F56C83B64F7547F /* Pods_Telesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D686B482DB302509109307 /* Pods_Telesapp.framework */; };
+		8709723F29CC4B57004D898F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709723E29CC4B57004D898F /* ChatViewController.swift */; };
+		8709724129CC52DE004D898F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709724029CC52DE004D898F /* StorageManager.swift */; };
 		87138FE229C1AA7100A5F49C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87138FE129C1AA7100A5F49C /* GoogleService-Info.plist */; };
 		87138FE429C1C39300A5F49C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87138FE329C1C39300A5F49C /* DatabaseManager.swift */; };
 		87502A6329C170F3003BB59B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A6229C170F3003BB59B /* AppDelegate.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		227D033474D1BF76293F24B5 /* Pods-Telesapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telesapp.release.xcconfig"; path = "Target Support Files/Pods-Telesapp/Pods-Telesapp.release.xcconfig"; sourceTree = "<group>"; };
 		652C3B042147A24C761976E7 /* Pods-Telesapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telesapp.debug.xcconfig"; path = "Target Support Files/Pods-Telesapp/Pods-Telesapp.debug.xcconfig"; sourceTree = "<group>"; };
+		8709723E29CC4B57004D898F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8709724029CC52DE004D898F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		87138FE129C1AA7100A5F49C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87138FE329C1C39300A5F49C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		87502A5F29C170F3003BB59B /* Telesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,7 @@
 				87502A6429C170F3003BB59B /* SceneDelegate.swift */,
 				87502A8829C1795F003BB59B /* Extension.swift */,
 				87138FE329C1C39300A5F49C /* DatabaseManager.swift */,
+				8709724029CC52DE004D898F /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				87502A7C29C1789F003BB59B /* NewConversationViewController.swift */,
 				87502A7E29C178B4003BB59B /* ProfileViewController.swift */,
 				87502A8029C178C2003BB59B /* PhotoViewerViewController.swift */,
+				8709723E29CC4B57004D898F /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -319,7 +325,9 @@
 				87502A6329C170F3003BB59B /* AppDelegate.swift in Sources */,
 				87502A7F29C178B4003BB59B /* ProfileViewController.swift in Sources */,
 				87502A6529C170F3003BB59B /* SceneDelegate.swift in Sources */,
+				8709723F29CC4B57004D898F /* ChatViewController.swift in Sources */,
 				87502A8129C178C2003BB59B /* PhotoViewerViewController.swift in Sources */,
+				8709724129CC52DE004D898F /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
