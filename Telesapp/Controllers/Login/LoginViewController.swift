@@ -91,7 +91,6 @@ override func viewDidLoad() {
 override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     scrollView.frame = view.bounds
-    scrollView.backgroundColor = .red
     let size = scrollView.width/3
     imageView.frame = CGRect(x: (scrollView.width-size)/2, y: 20, width: size, height: size)
     emailField.frame = CGRect(x: 30, y: imageView.bottom + 10, width: scrollView.width - 60, height: 52)
