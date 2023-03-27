@@ -109,6 +109,70 @@ extension DatabaseManager{
     }
 }
 
+/// MARK : - Sending Messages / conversations
+extension DatabaseManager {
+    /*
+     
+     
+     Conversation => [
+        [
+            "conversation_id":
+            "other_user_email":
+            "lastest_message"" => {
+            "date": Date()
+            "latest_message": "message"
+            "is_read": true/false
+     }
+        ]
+     
+     ]
+     */
+    
+    /// Create a new conversation with target user email and first message sent
+    public func createNewConversation(with otherUserEmail: String, firstMessage : Message, completion: @escaping (Bool) -> Void){
+        guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String else{
+            return
+        }
+        let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
+        let ref = database.child("\"(safeEmail)")
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            guard let userNode = snapshot.value as? [String: Any] else{
+                    completion(false)
+                    print("User not found")
+                    return
+            }
+            if var conversations = userNode["conversations"] as? [[String: Any]]{
+                // conversation array exists for current user
+                // you should append
+            }
+            else {
+                let newConversationData = [
+                    "id": "",
+                    "other_user_email": "",
+                    
+                ]
+            }
+        })
+    }
+    /// Fetch and returns all conversations for the user with passed in email
+    public func getAllConverssations(for email: String, completion: @escaping (Result<String,Error>) -> Void){
+        
+    }
+    
+    /// Get all messages for a given conversation
+    public func getAllMessagesForConversation(with id: String, completion: @escaping (Result<String,Error>) -> Void){
+        
+    }
+    
+    
+    /// Send a message with target conversation and message
+    public func sendMessage(to conversation: String, message: Message,completion: @escaping(Bool) -> Void){
+        
+    }
+}
+
+
+
 struct ChatAppUser{
     let firstName: String
     let lastName: String
