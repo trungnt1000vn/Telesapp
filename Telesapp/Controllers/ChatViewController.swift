@@ -75,35 +75,13 @@ class ChatViewController: MessagesViewController{
              senderId: safeEmail,
              displayName: "Me")
     }
-    private func listenForMessages(id: String){
-        DatabaseManager.shared.getAllMessagesForConversation(with: id, completion: {
-            [weak self] result in
-            switch result {
-            case .success(let messages):
-                guard !messages.isEmpty else {
-                    return
-                }
-                self?.messages = messages
-                
-                
-                DispatchQueue.main.async {
-                    self?.messagesCollectionView.reloadDataAndKeepOffset()
-                }
-                
-                
-            case .failure(let error):
-                print("Failed to get messages: \(error)")
-            }
-        })
-    }
+   
     
     init(with email: String,id : String?){
         self.otherUserEmail = email
         self.conversationId = id
         super.init(nibName: nil, bundle: nil)
-        if let conversationId = conversationId{
-            listenForMessages(id: conversationId)
-        }
+      
     }
     
     required init?(coder: NSCoder) {
@@ -118,9 +96,36 @@ class ChatViewController: MessagesViewController{
         messagesCollectionView.messagesDisplayDelegate = self
         messageInputBar.delegate = self
     }
+    private func listenForMessages(id: String, shouldScrollToBottom: Bool){
+        DatabaseManager.shared.getAllMessagesForConversation(with: id, completion: {
+            [weak self] result in
+            switch result {
+            case .success(let messages):
+                guard !messages.isEmpty else {
+                    return
+                }
+                self?.messages = messages
+                
+                
+                DispatchQueue.main.async {
+                        self?.messagesCollectionView.reloadDataAndKeepOffset()
+                    if shouldScrollToBottom{
+                        self?.messagesCollectionView.scrollToBottom(animated: true)
+                    }
+                }
+                
+                
+            case .failure(let error):
+                print("Failed to get messages: \(error)")
+            }
+        })
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         messageInputBar.inputTextView.becomeFirstResponder()
+        if let conversationId = conversationId{
+            listenForMessages(id: conversationId,shouldScrollToBottom: true)
+        }
     }
 }
 extension ChatViewController: InputBarAccessoryViewDelegate{
