@@ -23,6 +23,17 @@ final class DatabaseManager{
     
 }
 extension DatabaseManager{
+    public func getDataFor(path: String, completion :@escaping (Result<Any, Error>) -> Void){
+        self.database.child("\(path)").observeSingleEvent(of: .value) { snapshot in
+            guard let value = snapshot.value else {
+                completion(.failure(DatabaseError.failedToFetch))
+                return
+            }
+            completion(.success(value))
+        }
+    }
+}
+extension DatabaseManager{
     public func userExists(with email:String,completion:@escaping((Bool)-> Void)){
         var safeEmail = email.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
@@ -129,10 +140,11 @@ extension DatabaseManager {
     
     /// Create a new conversation with target user email and first message sent
     public func createNewConversation(with otherUserEmail: String,name: String, firstMessage : Message, completion: @escaping (Bool) -> Void){
-        guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String else{
+        guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String,
+              let currentName = UserDefaults.standard.value(forKey: "name") as? String
+         else{
             return
         }
-        
         let safeEmail = DatabaseManager.safeEmail(emailAddress: currentEmail)
         let ref = database.child("\(safeEmail)")
         ref.observeSingleEvent(of: .value, with: {[weak self] snapshot in
@@ -184,7 +196,7 @@ extension DatabaseManager {
            let recipient_newConversationData: [String: Any] = [
                "id": "conversation_\(firstMessage.messageId)",
                "other_user_email": safeEmail,
-               "name": "Self",
+               "name":  currentName,
                "latest_message": [
                    "date":dateString,
                    "message": message,
