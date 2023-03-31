@@ -147,6 +147,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate{
                 if success{
                     print ("Message sent")
                     self?.isNewConversation = false
+                    inputBar.inputTextView.text = ""
                 }
                 else{
                     print("Failed to send")
@@ -163,6 +164,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate{
             DatabaseManager.shared.sendMessage(to: conversationId,otherUserEmail: otherUserEmail,name :name, newMessage: message, completion: { success in
                 if(success){
                     print("message sent")
+                    inputBar.inputTextView.text = ""
                 }
                 else{
                     print("failed to sent")
