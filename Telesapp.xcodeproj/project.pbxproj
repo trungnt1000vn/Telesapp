@@ -23,6 +23,10 @@
 		87502A7F29C178B4003BB59B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A7E29C178B4003BB59B /* ProfileViewController.swift */; };
 		87502A8129C178C2003BB59B /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A8029C178C2003BB59B /* PhotoViewerViewController.swift */; };
 		87502A8929C1795F003BB59B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87502A8829C1795F003BB59B /* Extension.swift */; };
+		A26F2A2A29C9C80400A76A86 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A26F2A2929C9C80400A76A86 /* FacebookCore */; };
+		A26F2A2C29C9C80400A76A86 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = A26F2A2B29C9C80400A76A86 /* FacebookGamingServices */; };
+		A26F2A2E29C9C80400A76A86 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A26F2A2D29C9C80400A76A86 /* FacebookLogin */; };
+		A26F2A3029C9C80400A76A86 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = A26F2A2F29C9C80400A76A86 /* FacebookShare */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,7 @@
 		87502A7E29C178B4003BB59B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		87502A8029C178C2003BB59B /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		87502A8829C1795F003BB59B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A26F2A3129C9C94300A76A86 /* Telesapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Telesapp.entitlements; sourceTree = "<group>"; };
 		C4D686B482DB302509109307 /* Pods_Telesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -53,7 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26F2A2E29C9C80400A76A86 /* FacebookLogin in Frameworks */,
+				A26F2A2C29C9C80400A76A86 /* FacebookGamingServices in Frameworks */,
 				74E1EFB90F56C83B64F7547F /* Pods_Telesapp.framework in Frameworks */,
+				A26F2A3029C9C80400A76A86 /* FacebookShare in Frameworks */,
+				A26F2A2A29C9C80400A76A86 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 		87502A6129C170F3003BB59B /* Telesapp */ = {
 			isa = PBXGroup;
 			children = (
+				A26F2A3129C9C94300A76A86 /* Telesapp.entitlements */,
 				87138FE129C1AA7100A5F49C /* GoogleService-Info.plist */,
 				87502A8729C1793D003BB59B /* ViewModels */,
 				87502A8629C1792D003BB59B /* Controllers */,
@@ -192,6 +202,12 @@
 			dependencies = (
 			);
 			name = Telesapp;
+			packageProductDependencies = (
+				A26F2A2929C9C80400A76A86 /* FacebookCore */,
+				A26F2A2B29C9C80400A76A86 /* FacebookGamingServices */,
+				A26F2A2D29C9C80400A76A86 /* FacebookLogin */,
+				A26F2A2F29C9C80400A76A86 /* FacebookShare */,
+			);
 			productName = Telesapp;
 			productReference = 87502A5F29C170F3003BB59B /* Telesapp.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +236,9 @@
 				Base,
 			);
 			mainGroup = 87502A5629C170F3003BB59B;
+			packageReferences = (
+				A26F2A2829C9C80400A76A86 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 87502A6029C170F3003BB59B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -446,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Telesapp/Telesapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -474,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Telesapp/Telesapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -518,6 +539,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A26F2A2829C9C80400A76A86 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A26F2A2929C9C80400A76A86 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A26F2A2829C9C80400A76A86 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		A26F2A2B29C9C80400A76A86 /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A26F2A2829C9C80400A76A86 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		A26F2A2D29C9C80400A76A86 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A26F2A2829C9C80400A76A86 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		A26F2A2F29C9C80400A76A86 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A26F2A2829C9C80400A76A86 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87502A5729C170F3003BB59B /* Project object */;
 }
