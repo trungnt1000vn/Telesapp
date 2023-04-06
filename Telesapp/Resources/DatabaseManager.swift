@@ -206,14 +206,15 @@ extension DatabaseManager {
             //Update recipient conversation entry
             
             self?.database.child("\(otherUserEmail)/conversations").observeSingleEvent(of: .value, with: {
-                [weak self] snapshot in
-                if var conversations = snapshot.value as? [[String: Any]]{
+                [weak self]snapshot in
+                if var conversations = snapshot.value as? [[String: Any]] {
                     //append
                     conversations.append(recipient_newConversationData)
-                    self?.database.child("\(otherUserEmail)/conversations").setValue(conversationId)
+                    let conversationUpdates = ["\(otherUserEmail)/conversations": conversations]
+                    self?.database.updateChildValues(conversationUpdates)
                 }
                 else{
-                    //create
+                    //Creation
                     self?.database.child("\(otherUserEmail)/conversations").setValue([recipient_newConversationData])
                 }
             })
