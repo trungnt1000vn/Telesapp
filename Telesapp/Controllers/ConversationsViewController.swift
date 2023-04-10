@@ -29,7 +29,7 @@ class ConversationsViewController: UIViewController {
     private var conversations = [Conversation]()
     
     private let tableView: UITableView = {
-       let table = UITableView()
+        let table = UITableView()
         table.isHidden = true
         table.register(ConversationTableViewCell.self, forCellReuseIdentifier: ConversationTableViewCell.identifier)
         return table
@@ -87,11 +87,9 @@ class ConversationsViewController: UIViewController {
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)
     }
-    private func createNewConversation(result: [String:String]) {
-        guard let name = result["name"],
-              let email = result["email"] else {
-            return
-        }
+    private func createNewConversation(result: SearchResult) {
+        let name = result.name
+        let email = result.email
         let vc = ChatViewController(with: email, id: nil)
         vc.isNewConversation = true
         vc.title = name
